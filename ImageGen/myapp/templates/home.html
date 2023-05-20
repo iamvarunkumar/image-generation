@@ -50,37 +50,75 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 700px;
+            margin-top: 620px;
         }
 
         .button {
             display: inline-block;
             padding: 10px 20px;
             font-size: 18px;
-            font-weight: bold;
             text-decoration: none;
             color: white;
-            background-color: #ff006e;
-            border-radius: 30px;
+            border-radius: 25px;
             transition: background-color 0.3s ease;
             margin: 10px;
             cursor: pointer;
         }
 
-        .button:hover {
-            background-color: #d90061;
+        .button.guide {
+            border-radius: 25px 25px 25px 25px;
+            border: 3px outset #34B5DE60;
+            color: #227791;
+            position:absolute;
+            left: 12px;
+            font-weight:bold;
         }
 
-        .button.left {
-            border-radius: 30px 30px 30px 30px;
+        .button.guide:hover{
+            background: #3CD0FF60;
+            color: white;
         }
 
-        .button.right {
-            border-radius: 30px 30px 30px 30px;
+        .button.about {
+            border-radius: 25px 25px 25px 25px;
+            border: 3px outset #AA791B60;
+            color: #FFE1B3;
+            position:absolute;
+            left: 150px;
+            font-weight:bold;
         }
 
-        .button.middle {
-            border-radius: 50%;
+        .button.about:hover {
+            border-radius: 25px 25px 25px 25px;
+            border: 3px inset #FFC36860;
+            background: #FFC36860;
+            color: white;
+            font-weight: bold;
+        }
+
+        .button.generate {
+            border-radius: 25px 25px 25px 25px;
+            border: 3px outset #21752F60;
+            background: #00b894;
+            color: #f1f1f1;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            font-family: helvetica, sans-serif;
+        }
+
+        .button.generate:hover {
+            background-color: rgba(0, 184, 148, 0.4);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button.gallery {
+            border-radius: 25px 25px 25px 25px;
+        }
+
+        .button.signin {
+            border-radius: 25px 25px 25px 25px;
         }
 
         /* Additional styles for responsive layout */
@@ -103,11 +141,11 @@
     </div>
     <h1 class="logo">ImageGen</h1>
     <div class="buttons">
-        <a class="button left" href="#">Guide</a>
-        <a class="button left" href="#">Button 2</a>
-        <a class="button right" href="#">Button 3</a>
-        <a class="button right" href="#">Button 4</a>
-        <a class="button middle" href="#">Middle Button</a>
+        <a class="button guide" href="#">📖Guide</a>
+        <a class="button about" href="#">🔍About Us</a>
+        <a class="button generate" href="#">🪄Generate</a>
+        <a class="button gallery" href="#">📲Gallery</a>
+        <a class="button signin" href="#">💻Sign In</a>
     </div>
 </body>
 </html>
