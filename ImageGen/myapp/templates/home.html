@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageGen</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background gradient */
+        body {
+            background: radial-gradient(ellipse at center, #0f4c75, #000000);
+        }
+
+        /* Ribbon */
+        .ribbon {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            z-index: 999;
+        }
+
+        /* Logo */
+        .logo {
+            display: block;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            font-weight: bold;
+            color: rgba(255, 235, 205, 0.1);
+            transition: color 0.3s ease;
+            text-align: center;
+        }
+
+        .logo:hover {
+            color: rgba(188, 143, 143, 0.8);
+        }
+
+        /* Buttons */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 700px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: white;
+            background-color: #ff006e;
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #d90061;
+        }
+
+        .button.left {
+            border-radius: 30px 30px 30px 30px;
+        }
+
+        .button.right {
+            border-radius: 30px 30px 30px 30px;
+        }
+
+        .button.middle {
+            border-radius: 50%;
+        }
+
+        /* Additional styles for responsive layout */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 50px;
+                margin-top: 100px;
+            }
+
+            .buttons {
+                margin-top: 200px;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ribbon">
+        <span>ImageGen</span>
+    </div>
+    <h1 class="logo">ImageGen</h1>
+    <div class="buttons">
+        <a class="button left" href="#">Guide</a>
+        <a class="button left" href="#">Button 2</a>
+        <a class="button right" href="#">Button 3</a>
+        <a class="button right" href="#">Button 4</a>
+        <a class="button middle" href="#">Middle Button</a>
+    </div>
+</body>
+</html>
