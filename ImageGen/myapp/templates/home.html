@@ -11,9 +11,30 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Background gradient */
-        body {
-            background: radial-gradient(ellipse at center, #0f4c75, #000000);
+        .animated-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                to right, #CD5B45, #642B39, #4B0082
+            );
+            background-size: 400% 400%;
+            animation: animate-background 10s infinite ease-in-out;
+            z-index: -1;
+        }
+
+        @keyframes animate-background {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0 50%;
+            }
         }
 
         /* Ribbon */
@@ -34,11 +55,29 @@
             top: 30%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 120px;
-            font-weight: bold;
-            color: rgba(255, 235, 205, 0.1);
-            transition: color 0.3s ease;
+            font-size: 120px;            
+            color: rgba(11, 218, 166, 0.1);
             text-align: center;
+            font-family: 'Bebas Neue', sans-serif; /* Replace 'YourCustomFont' with the actual name of your customized font */
+        
+            /* Neon light effect */
+            animation: neonEffect 3s infinite alternate;
+        }
+        
+        @keyframes neonEffect {
+            0% {
+                color: rgba(110, 247, 213, 0.1);
+            }
+            50% {
+                color: rgba(110, 247, 213, 1);
+                text-shadow: 0 0 10px rgba(110, 247, 213, 1),
+                0 0 20px rgba(110, 247, 213, 1),
+                0 0 30px rgba(110, 247, 213, 1),
+                0 0 40px rgba(110, 247, 213, 1);
+            }
+            100% {
+                color: rgba(110, 247, 213, 0.1);
+            }
         }
 
         .logo:hover {
@@ -115,10 +154,18 @@
 
         .button.gallery {
             border-radius: 25px 25px 25px 25px;
+            border: 3px outset;
+            cursor: pointer;
+            position: absolute;
+            right: 160px;
         }
 
         .button.signin {
             border-radius: 25px 25px 25px 25px;
+            border: 3px outset;
+            cursor: pointer;
+            position: absolute;
+            right: 10px;
         }
 
         /* Additional styles for responsive layout */
@@ -136,16 +183,17 @@
     </style>
 </head>
 <body>
+    <div class="animated-background"></div>
     <div class="ribbon">
         <span>ImageGen</span>
     </div>
     <h1 class="logo">ImageGen</h1>
     <div class="buttons">
-        <a class="button guide" href="#">📖Guide</a>
-        <a class="button about" href="#">🔍About Us</a>
-        <a class="button generate" href="#">🪄Generate</a>
-        <a class="button gallery" href="#">📲Gallery</a>
-        <a class="button signin" href="#">💻Sign In</a>
+        <a class="button guide" href="#">📖 Guide</a>
+        <a class="button about" href="#">🔍 About Us</a>
+        <a class="button generate" href="#">🪄 Generate</a>
+        <a class="button gallery" href="#">📲 Gallery</a>
+        <a class="button signin" href="#">💻 Sign In</a>
     </div>
 </body>
 </html>
