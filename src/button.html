@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popular Button Styles</title>
+    <style>
+    /* Style 1: Flat Button */
+    .button.flat {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .button.flat:hover {
+        background-color: #2980b9;
+    }
+
+    /* Style 2: Outline Button */
+    .button.outline {
+        background-color: transparent;
+        color: #3498db;
+        border: 2px solid #3498db;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    .button.outline:hover {
+        color: #fff;
+    }
+
+    /* Style 3: Rounded Button */
+    .button.rounded {
+        background-color: #3498db;
+        color: #fff;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .button.rounded:hover {
+        transform: scale(1.1);
+    }
+
+    /* Style 4: Gradient Button */
+    .button.gradient {
+        background: linear-gradient(to right, #ffafbd, #ffc3a0);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .button.gradient:hover {
+        background: linear-gradient(to right, #ffc3a0, #ffafbd);
+    }
+
+    /* Style 5: Shadow Button */
+    .button.shadow {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+    }
+    .button.shadow:hover {
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    /* Style 6: Hover Effects Button */
+    .button.hover {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .button.hover:hover {
+        background-color: #ffafbd;
+    }
+
+    /* Style 7: Click Effects Button */
+    .button.click {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .button.click:hover {
+        transform: scale(0.95);
+    }
+
+    /* Style 8: Icon Button */
+    .button.icon {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+    .button.icon img {
+        margin-right: 5px;
+    }
+    .button.icon:hover {
+        transform: rotate(180deg);
+    }
+
+    /* Style 9: Loading State Button */
+    .button.loading {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: progress;
+        transition: background 0.3s ease;
+    }
+    .button.loading:hover {
+        background-color: #ffafbd;
+    }
+    .button.loading:after {
+        content: "";
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+        0% {
+        transform: rotate(0deg);
+        }
+        100% {
+        transform: rotate(360deg);
+        }
+    }
+
+    /* Style 10: Disabled Button */
+    .button.disabled {
+        background-color: #ccc;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: not-allowed;
+        transition: opacity 0.3s ease;
+    }
+    .button.disabled:hover {
+        opacity: 0.7;
+    }
+
+    /* Style 11: Pill Button */
+    .button.pill {
+        background-color: #3498db;
+        color: #fff;
+        border-radius: 50px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .button.pill:hover {
+        background-color: #ffafbd;
+    }
+
+    /* Style 12: Neumorphism Button */
+    .button.neumorphism {
+        background-color: #e0e5ec;
+        color: #6e768a;
+        border: none;
+        padding: 10px 20px;
+        box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2),
+                    -4px -4px 8px 0 rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .button.neumorphism:hover {
+        transform: scale(1.1);
+    }
+
+    /* Style 13: 3D Button */
+    .button.three-d {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+        transform: perspective(1px) translateZ(0);
+        cursor: pointer;
+        transition: box-shadow 0.3s ease;
+    }
+    .button.three-d:hover {
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Style 14: Transparent Button */
+    .button.transparent {
+        background-color: transparent;
+        color: #3498db;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    .button.transparent:hover {
+        color: #ffafbd;
+    }
+
+    /* Style 15: Animated Button */
+    .button.animated {
+        background-color: #3498db;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        animation: pulse 1s infinite;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .button.animated:hover {
+        transform: scale(1.1);
+    }
+    @keyframes pulse {
+        0% {
+        transform: scale(1);
+        }
+        50% {
+        transform: scale(1.2);
+        }
+        100% {
+        transform: scale(1);
+        }
+    }
+    </style>
+</head>
+<body>
+    <button class="button flat">Flat Button</button>
+    <button class="button outline">Outline Button</button>
+    <button class="button rounded">Rounded Button</button>
+    <button class="button gradient">Gradient Button</button>
+    <button class="button shadow">Shadow Button</button>
+    <button class="button hover">Hover Effects Button</button>
+    <button class="button click">Click Effects Button</button>
+    <button class="button icon"><img src="icon.png" alt="Icon">Icon Button</button>
+    <button class="button loading">Loading State Button</button>
+    <button class="button disabled" disabled>Disabled Button</button>
+    <button class="button pill">Pill Button</button>
+    <button class="button neumorphism">Neumorphism Button</button>
+    <button class="button three-d">3D Button</button>
+    <button class="button transparent">Transparent Button</button>
+    <button class="button animated">Animated Button</button>
+</body>
+</html>

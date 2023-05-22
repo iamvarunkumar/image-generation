@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Gradient Background</title>
+    <style>
+    @keyframes color-transition {
+        0% {
+        background: linear-gradient(135deg, #FFB347, #FFCC99);
+        }
+        50% {
+        background: linear-gradient(135deg, #FFCC99, #B993D6);
+        }
+        100% {
+        background: linear-gradient(135deg, #B993D6, #FFB347);
+        }
+    }
+    @keyframes angle-rotation {
+        0% {
+            background: linear-gradient(0deg, #FFA7E1, #B993D6);
+        }
+        100% {
+            background: linear-gradient(360deg, #FFA7E1, #B993D6);
+        }
+    }
+    @keyframes opacity-fade {
+        0% {
+            background: linear-gradient(135deg, rgba(255, 183, 71, 0.8), rgba(255, 204, 153, 0.8));
+        }
+        50% {
+            background: linear-gradient(135deg, rgba(255, 183, 71, 0.2), rgba(255, 204, 153, 0.2));
+        }
+        100% {
+            background: linear-gradient(135deg, rgba(255, 183, 71, 0.8), rgba(255, 204, 153, 0.8));
+        }
+    }
+    @keyframes scale-animation {
+        0% {
+            background: linear-gradient(135deg, #FDBB2D, #FF512F);
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.5);
+        }
+        100% {
+            background: linear-gradient(135deg, #FF512F, #FDBB2D);
+            transform: scale(1);
+        }
+    }
+    @keyframes pulse-animation {
+        0% {
+            background: linear-gradient(135deg, #D0F2C0, #3CB371);
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2);
+        }
+        100% {
+            background: linear-gradient(135deg, #3CB371, #D0F2C0);
+            transform: scale(1);
+        }
+    }
+    
+    @keyframes fade-in {
+        0% {
+            background: linear-gradient(135deg, transparent, #8B81C3);
+        }
+        100% {
+            background: linear-gradient(135deg, #8B81C3, transparent);
+        }
+    }
+    
+    @keyframes blur-animation {
+        0% {
+            background: linear-gradient(135deg, #FDBE13, #FFAA00);
+            filter: blur(0);
+        }
+        50% {
+            filter: blur(4px);
+        }
+        100% {
+            background: linear-gradient(135deg, #FFAA00, #FDBE13);
+            filter: blur(0);
+        }
+    }
+    
+    @keyframes shine-animation {
+        0% {
+            background: linear-gradient(135deg, #AFEEEE, #00BFFF);
+            background-position: -200%;
+        }
+        100% {
+            background: linear-gradient(135deg, #00BFFF, #AFEEEE);
+            background-position: 200%;
+        }
+    }
+    
+    @keyframes ripple-effect {
+        0% {
+            background: linear-gradient(135deg, #8A2BE2, #CDA2AB);
+            background-size: 100% 100%;
+        }
+        50% {
+            background-size: 200% 200%;
+        }
+        100% {
+            background: linear-gradient(135deg, #CDA2AB, #8A2BE2);
+            background-size: 100% 100%;
+        }
+    }
+    
+    @keyframes neon-glow {
+        0% {
+            background: linear-gradient(135deg, rgba(255, 81, 47, 0.8), rgba(221, 36, 118, 0.8));
+            box-shadow: 0 0 10px rgba(255, 81, 47, 0.8), 0 0 20px rgba(255, 81, 47, 0.6), 0 0 30px rgba(255, 81, 47, 0.4), 0 0 40px rgba(255, 81, 47, 0.2);
+        }
+        50% {
+            box-shadow: 0 0 20px rgba(255, 81, 47, 0.6), 0 0 30px rgba(255, 81, 47, 0.4), 0 0 40px rgba(255, 81, 47, 0.2), 0 0 50px rgba(255, 81, 47, 0.1);
+        }
+        100% {
+            background: linear-gradient(135deg, rgba(221, 36, 118, 0.8), rgba(255, 81, 47, 0.8));
+            box-shadow: 0 0 10px rgba(221, 36, 118, 0.8), 0 0 20px rgba(221, 36, 118, 0.6), 0 0 30px rgba(221, 36, 118, 0.4), 0 0 40px rgba(221, 36, 118, 0.2);
+        }
+    }
+    
+    @keyframes wave-animation {
+        0% {
+            background: linear-gradient(135deg, #5BE584, #368F8B);
+            background-size: 100% 100%;
+            background-position: 0% 0%;
+        }
+        50% {
+            background-position: 100% 0%;
+        }
+        100% {
+            background: linear-gradient(135deg, #368F8B, #5BE584);
+            background-size: 100% 100%;
+            background-position: 0% 0%;
+        }
+    }
+    
+    @keyframes sparkle-effect {
+        0% {
+            background: linear-gradient(135deg, #FFF78B, #80FF72);
+            box-shadow: inset 0 0 10px rgba(255, 247, 139, 0.8), 0 0 20px rgba(128, 255, 114, 0.8);
+        }
+        50% {
+            box-shadow: inset 0 0 20px rgba(255, 247, 139, 0.8), 0 0 40px rgba(128, 255, 114, 0.8);
+        }
+        100% {
+            background: linear-gradient(135deg, #80FF72, #FFF78B);
+            box-shadow: inset 0 0 10px rgba(128, 255, 114, 0.8), 0 0 20px rgba(255, 247, 139, 0.8);
+        }
+    }
+
+    @keyframes breathing-animation {
+        0%, 100% {
+            background: linear-gradient(135deg, #667EEA, #764BA2);
+        }
+        50% {
+            background: linear-gradient(135deg, #F45B69, #FAAF58);
+        }
+    }
+
+    .animated-gradient1 {
+        animation: color-transition 5s ease-in-out infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .animated-gradient2 {
+        animation: angle-rotation 5s linear infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .animated-gradient3 {
+        animation: opacity-fade 3s linear infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .animated-gradient4 {
+        animation:  scale-animation 4s ease-in-out infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .animated-gradient5 {
+        animation:  pulse-animation 2s ease-in-out infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .animated-gradient6 {
+        animation: fade-in 2s ease-in-out infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .animated-gradient7 {
+        animation: blur-animation 4s ease-in-out infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .animated-gradient8 {
+        animation: shine-animation 3s linear infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .animated-gradient9 {
+        animation:  ripple-effect 5s ease-in-out infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .animated-gradient10 {
+        animation:  neon-glow 4s ease-in-out infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .animated-gradient11 {
+        animation:  wave-animation 4s linear infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .animated-gradient12 {
+        animation:  sparkle-effect 3s ease-in-out infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .animated-gradient13 {
+        height: 200px;
+        width: 400px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        animation: breathing-animation 5s ease-in-out infinite;
+        height: 200px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="animated-gradient1">
+        Color Transition Animated Gradient.
+    </div>
+    <div class="animated-gradient2">
+        Angle Rotation Gradient.
+    </div>
+    <div class="animated-gradient3">
+        Opacity Fade Gradient.
+    </div>
+    <div class="animated-gradient4">
+        Scale Animation Gradient.
+    </div>
+    <div class="animated-gradient5">
+        Pulse Gradient.
+    </div>
+    <div class="animated-gradient6">
+        Fade In Gradient.
+    </div>
+    <div class="animated-gradient7">
+        Blur Animation Gradient.
+    </div>
+    <div class="animated-gradient8">
+        Shine Gradient.
+    </div>
+    <div class="animated-gradient9">
+        Ripple Effect Gradient.
+    </div>
+    <div class="animated-gradient10">
+        Neon Glow Gradient.
+    </div>
+    <div class="animated-gradient11">
+        Wave Animation Gradient.
+    </div>
+    <div class="animated-gradient12">
+        Sparkle Effect Gradient.
+    </div>
+    <div class="animated-gradient13">
+        Breathing Gradient.
+    </div>
+</body>
+</html>
