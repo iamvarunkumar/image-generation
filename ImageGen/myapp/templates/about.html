@@ -1,0 +1,138 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'myapp/about-styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani&display=swap" rel="stylesheet">
+    <title>About Us</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i>Home</a></li>
+            <li><a href="#"><i class="fas fa-book"></i>Guide</a></li>
+            <li><a href="#"><i class="fas fa-cogs"></i>Generate</a></li>
+            <li><a href="#"><i class="fas fa-images"></i>Gallery</a></li>
+            <li><a href="#"><i class="fas fa-sign-in-alt"></i>Sign In</a></li>
+            <li><a href="#"><i class="fas fa-user-plus"></i>Sign Up</a></li>
+        </ul>
+        <div class="app-name">
+            App Name
+        </div>
+    </nav>
+
+    <header>
+        <h1>About Our Team</h1>
+    </header>
+
+<section id="leader">
+        <h2>Project Leader</h2>
+        <div class="member flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="image-container">
+                        <img src="{% static 'myapp/images/varun.jpg' %}" alt="Team Leader">
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Varun Kumar</h3>
+                    <p>A brief description about yourself.</p>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+                        <a class="github-button" href="https://github.com" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a class="linkedin-button" href="https://linkedin.com" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+    </section>
+    
+
+<section id="team-members">
+        <h2>Team Members</h2>
+        <div class="member flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="image-container">
+                        <img src="member1.jpg" alt="Team Member 1">
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Shivangi Chauhan</h3>
+                    <p>A brief description about the team member.</p>
+                    <div class="button-container">
+                        <a class="github-button" href="https://github.com" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a class="linkedin-button" href="https://linkedin.com" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="member flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="image-container">
+                        <img src="member2.jpg" alt="Team Member 1">
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Shrihari Gangale</h3>
+                    <p>A brief description about the team member.</p>
+                    <div class="button-container">
+                        <a class="github-button" href="https://github.com" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a class="linkedin-button" href="https://linkedin.com" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="member flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="image-container">
+                        <img src="member3.jpg" alt="Team Member 1">
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3>Sachin Yadav</h3>
+                    <p>A brief description about the team member.</p>
+                    <div class="button-container">
+                        <a class="github-button" href="https://github.com" target="_blank">
+                            <i class="fab fa-github"></i>
+                            GitHub
+                        </a>
+                        <a class="linkedin-button" href="https://linkedin.com" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+
+    <script src="about-script.js"></script>
+</body>
+</html>

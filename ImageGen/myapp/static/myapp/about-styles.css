@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #333, #222);
+    color: #fff;
+    }
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    }
+
+h1 {
+    margin: 0;
+    }
+
+h3 {
+    margin: 10px 0;
+    }
+
+section {
+    padding: 40px;
+    text-align: center;
+    }
+
+.member {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+    }
+
+img {
+    width: 100%;
+    height: auto;
+    }
+
+p {
+    margin: 0;
+    }
+
+.flip-card {
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 200px;
+    height: 300px; /* Update the height to accommodate the rectangular shape */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px; /* Add rounded border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+}
+
+.flip-card-front .image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px; /* Match the rounded border of the card */
+    overflow: hidden; /* Hide any overflow from the image */
+}
+
+.flip-card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.flip-card-back {
+    background-color: #333;
+    color: #fff;
+    transform: rotateY(180deg);
+    padding: 20px;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.button-container {
+    margin-top: 10px;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Rajdhani", Arial, sans-serif;
+    font-size: 0; /* Remove text */
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #7ed957, #52b36e);
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin: 10px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    transition: box-shadow 0.5s, border-radius 0.5s, padding 0.5s, width 0.5s, height 0.5s;
+}
+
+.github-button i {
+    font-size: 20px; /* Adjust icon size as needed */
+    color: #fff;
+    transition: opacity 0.5s;
+}
+
+.github-button:hover i {
+    opacity: 0;
+    font-size: 20px;
+    align-items: center;
+}
+
+.github-button:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8), 0 0 20px rgba(0, 255, 0, 0.6), 0 0 30px rgba(0, 255, 0, 0.4), 0 0 80px rgba(0, 255, 0, 0.2);
+    border-radius: 30px;
+    font-size: 20px;
+    align-items: center;
+    font-weight: bold;
+    padding: 15px 70px;
+    width: 120px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+}
+
+.github-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 3px solid #265c2d;
+    border-radius: 50%;
+    transition: border-radius 0.5s;
+}
+
+.github-button:hover::before {
+    border-radius: 20px;
+}
+
+.linkedin-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Bitter", Arial, sans-serif;
+    font-size: 0; /* Remove text */
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(90deg, #1f45b8, #002f87);
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    width: 50px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+    margin: 10px 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 162, 255, 0.5);
+    transition: box-shadow 0.5s, border-radius 0.5s, padding 0.5s, width 0.5s, height 0.5s;
+}
+
+.linkedin-button i {
+    font-size: 20px; /* Adjust icon size as needed */
+    color: #fff;
+    transition: opacity 0.5s;
+}
+
+.linkedin-button:hover i {
+    opacity: 0;
+    font-size: 20px;
+    align-items: center;
+}
+
+.linkedin-button:hover {
+    box-shadow: 0 0 10px rgba(0, 162, 255, 0.8), 0 0 20px rgba(0, 162, 255, 0.6), 0 0 30px rgba(0, 162, 255, 0.4), 0 0 80px rgba(0, 162, 255, 0.2);
+    border-radius: 30px;
+    font-size: 20px;
+    align-items: center;
+    font-weight: bold;
+    padding: 15px 70px;
+    width: 120px; /* Adjust size as needed */
+    height: 50px; /* Adjust size as needed */
+}
+
+.linkedin-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border: 2px solid #0f5e92;
+    border-radius: 50%;
+    transition: border-radius 0.5s;
+}
+
+.linkedin-button:hover::before {
+    border-radius: 20px;
+}
+
+
+@keyframes breathing-green {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+}
+
+@keyframes breathing-blue {
+    0% {
+        box-shadow: 0 0 5px rgba(13, 109, 133, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(13, 109, 133, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(13, 109, 133, 0.5);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(-3px);
+    }
+}
+
+@keyframes glowing-green {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+@keyframes wave {
+    0% {
+        text-shadow: none;
+    }
+    50% {
+        text-shadow: 0 0 10px #5e97f3, 0 0 20px #5e97f3, 0 0 30px #5e97f3, 0 0 40px #5e97f3, 0 0 50px #5e97f3;
+    }
+    100% {
+        text-shadow: none;
+    }
+}
+
+.navbar {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 10px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.app-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
