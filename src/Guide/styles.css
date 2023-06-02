@@ -1,0 +1,37 @@
+body {
+    background-color: #202124;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+.content {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.content.show {
+    opacity: 1;
+    transform: none;
+}
+
+p {
+    margin-bottom: 20px;
+}
