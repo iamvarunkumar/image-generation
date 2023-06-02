@@ -1,0 +1,20 @@
+{
+    "cSpell.words": [
+        "authtoken",
+        "autocast",
+        "cuda",
+        "customtkinter",
+        "DDIM",
+        "DDPM",
+        "DEIS",
+        "dpmsolver",
+        "dtype",
+        "Heun",
+        "KDPM",
+        "multistep",
+        "pndm",
+        "pretrained",
+        "Singlestep",
+        "unipc"
+    ]
+}

@@ -1,0 +1,2 @@
+#openai
+API_KEY - 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

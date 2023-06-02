@@ -1,0 +1,23 @@
+# Ignore virtual environment files
+image_generation/
+.env/
+
+# Ignore Python compiled files
+*.pyc
+*.pyo
+__pycache__/
+
+# Ignore development-specific files
+*.env
+*.log
+
+# Ignore package distribution files
+dist/
+build/
+*.egg-info/
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore macOS system files
+.DS_Store

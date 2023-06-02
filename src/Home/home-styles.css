@@ -1,0 +1,145 @@
+body {
+  background-image: url('https://img.freepik.com/free-photo/3d-technology-geometric-black-background_53876-97124.jpg?w=1380&t=st=1685730385~exp=1685730985~hmac=ac04ee85848a7281599e670052729a86beef4f22c942d0dec86ee0f93cbe6652');
+  background-position: center;
+  color: aliceblue;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.container {
+    padding: 0 20px;
+    height: 100vh;
+    overflow: auto;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 105, 110, 0.478);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.082);
+    margin: 30px;
+}
+
+.show-on-scroll {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.show-on-scroll.visible {
+  opacity: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.navbar-left img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.navbar-left span {
+  font-size: 18px;
+}
+
+.generate-button,
+.signin-button,
+.signup-button {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.generate-button:hover,
+.signin-button:hover,
+.signup-button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.navbar-right {
+  display: flex;
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.welcome-section h1,
+.welcome-section p {
+  font-size: 36px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 2s, transform 2s;
+}
+
+.generated-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.generated-section h2 {
+  font-size: 24px;
+}
+
+.image-container {
+    background-image: ;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 300px;
+  margin-top: 20px;
+  padding: 20px;
+  backdrop-filter: blur(7px) saturate(147%);
+  -webkit-backdrop-filter: blur(7px) saturate(147%);
+  background-color: rgba(13, 13, 13, 0.835);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 200px;
+  height: 200px;
+  margin: 10px 5px;
+  transition: transform 0.3s;
+  cursor: zoom-in;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+}
+
+.links-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+  padding: 40px;
+}
+
+.links-section div {
+  text-align: center;
+}
+
+.links-section h3 {
+  font-size: 20px;
+}
+
+.licensing-section {
+  text-align: center;
+  padding: 20px;
+}
